@@ -1,30 +1,30 @@
-/Config/database.php
 *.log
+/app/Config/database.php
 
-/tmp/*
-!/tmp/empty
+/app/tmp/*
+!/app/tmp/empty
 
-/tmp/cache/*
-!/tmp/cache/empty
+/app/tmp/cache/*
+!/app/tmp/cache/empty
 
-!/tmp/cache/models
-/tmp/cache/models/*
-!/tmp/cache/models/empty
+!/app/tmp/cache/models
+/app/tmp/cache/models/*
+!/app/tmp/cache/models/empty
 
-!/tmp/cache/persistent
-/tmp/cache/persistent/*
-!/tmp/cache/persistent/empty
+!/app/tmp/cache/persistent
+/app/tmp/cache/persistent/*
+!/app/tmp/cache/persistent/empty
 
-!/tmp/cache/views
-/tmp/cache/views/*
-!/tmp/cache/views/empty
+!/app/tmp/cache/views
+/app/tmp/cache/views/*
+!/app/tmp/cache/views/empty
 
-/tmp/logs
-!/tmp/logs/empty
+/app/tmp/logs
+!/app/tmp/logs/empty
 
-/tmp/sessions
-!/tmp/sessions/empty
+/app/tmp/sessions
+!/app/tmp/sessions/empty
 
-/tmp/tests
-!/tmp/tests/empty
+/app/tmp/tests
+!/app/tmp/tests/empty
 
