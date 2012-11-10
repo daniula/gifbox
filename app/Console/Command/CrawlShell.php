@@ -66,7 +66,7 @@ class CrawlShell extends AppShell {
       }
 
     } else {
-      $this->out('Reddit error: '.json_decode($this->Redit->response));
+      $this->out('Reddit error: '.json_decode($this->Reddit->response));
     }
 
     if ($this->params['debug']) {
