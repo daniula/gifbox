@@ -2,29 +2,29 @@
 /app/Config/database.php
 
 /app/tmp/*
-!/app/tmp/empty
+!/app/tmp/.gitkeep
 
 /app/tmp/cache/*
-!/app/tmp/cache/empty
+!/app/tmp/cache/.gitkeep
 
 !/app/tmp/cache/models
 /app/tmp/cache/models/*
-!/app/tmp/cache/models/empty
+!/app/tmp/cache/models/.gitkeep
 
 !/app/tmp/cache/persistent
 /app/tmp/cache/persistent/*
-!/app/tmp/cache/persistent/empty
+!/app/tmp/cache/persistent/.gitkeep
 
 !/app/tmp/cache/views
 /app/tmp/cache/views/*
-!/app/tmp/cache/views/empty
+!/app/tmp/cache/views/.gitkeep
 
 /app/tmp/logs
-!/app/tmp/logs/empty
+!/app/tmp/logs/.gitkeep
 
 /app/tmp/sessions
-!/app/tmp/sessions/empty
+!/app/tmp/sessions/.gitkeep
 
 /app/tmp/tests
-!/app/tmp/tests/empty
+!/app/tmp/tests/.gitkeep
 
