@@ -21,10 +21,12 @@
 /app/tmp/cache/views/*
 !/app/tmp/cache/views/.gitkeep
 
-/app/tmp/logs
+!/app/tmp/logs
+/app/tmp/logs/*
 !/app/tmp/logs/.gitkeep
 
-/app/tmp/sessions
+!/app/tmp/sessions
+/app/tmp/sessions/*
 !/app/tmp/sessions/.gitkeep
 
 /app/tmp/tests
