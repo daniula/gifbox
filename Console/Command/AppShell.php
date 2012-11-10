@@ -17,6 +17,8 @@
  */
 
 App::uses('Shell', 'Console');
+App::uses('Component', 'Controller');
+App::uses('ComponentCollection', 'Controller');
 
 /**
  * Application Shell
@@ -28,4 +30,31 @@ App::uses('Shell', 'Console');
  */
 class AppShell extends Shell {
 
+  private function _loadComponents() {
+    $this->Components = new ComponentCollection();
+    if (empty($this->components)) {
+      return;
+    }
+
+    if (array_search(null, $this->components)) {
+      App::uses('AppController', 'Controller');
+      $controller = new AppController();
+      foreach ($this->components as $name => &$settings) {
+        if (!empty($controller->components[$name]) && is_null($settings)) {
+          $settings = $controller->components[$name];
+        }
+      }
+    }
+
+    $components = ComponentCollection::normalizeObjectArray($this->components);
+    foreach ($components as $name => $properties) {
+      $this->{$name} = $this->Components->load($properties['class'], $properties['settings']);
+    }
+  }
+
+  public function initialize() {
+    parent::initialize();
+
+    $this->_loadComponents();
+  }
 }
