@@ -1,9 +1,11 @@
 *.log
 /app/Config/database.php
 
+!/app/tmp
 /app/tmp/*
 !/app/tmp/.gitkeep
 
+!/app/tmp/cache
 /app/tmp/cache/*
 !/app/tmp/cache/.gitkeep
 
