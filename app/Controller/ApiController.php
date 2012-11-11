@@ -64,7 +64,13 @@ class ApiController extends AppController {
 
   public function beforeRender() {
     parent::beforeRender();
-    $this->set('result', Set::extract($this->viewVars['result'], '{n}.Image'));
+    $results = Set::extract($this->viewVars['result'], '{n}.Image');
+    foreach ($results as &$result) {
+      if (strpos('.gif', $result['url']) === false && strpos('.jpg', $result['url'])) {
+        $result['url'] .= '.gif';
+      }
+    }
+    $this->set('result', $result);
 
     $this->set('_serialize', array('result'));
   }
