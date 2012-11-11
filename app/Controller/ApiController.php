@@ -66,7 +66,10 @@ class ApiController extends AppController {
     parent::beforeRender();
     $result = Set::extract($this->viewVars['result'], '{n}.Image');
     foreach ($result as &$elem) {
-      if (strpos($elem['url'], '.gif') === false && strpos($elem['url'], '.jpg') === false) {
+      if (strpos($elem['url'], '.gif') === false &&
+          strpos($elem['url'], '.jpg') === false &&
+          strpos($elem['url'], 'replygif.net') == false
+      ) {
         $elem['url'] .= '.gif';
       }
     }
