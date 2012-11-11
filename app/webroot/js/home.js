@@ -13,7 +13,7 @@ $(function(){
           console.log(gif.thumbnail);
           $wrapper.append($('<li>').append(
             $('<a>').attr('href', gif.url).append(
-              $('<img>').attr('src', gif.thumbnail)
+              $('<img>').attr('src', gif.url).css('max-width', 200).css('max-height', 200)
             )
           ));
 
