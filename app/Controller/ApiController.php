@@ -5,7 +5,7 @@ class ApiController extends AppController {
   public $uses = array('Image', 'Tag');
   private $limit = 10;
   private $fields = array('url', 'thumbnail');
-  private $conditions = array('nsfw' => false, 'thumbnail NOT' => 'default');
+  private $conditions = array('nsfw' => false);
 
   private function getDefaultQueryParams() {
     return array($this->conditions, $this->fields, $this->limit);
