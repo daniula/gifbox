@@ -53,11 +53,14 @@ class ApiController extends AppController {
       $limit = $this->params['named']['limit'];
     }
 
+
     if ($tags = $this->Tag->find('all', array('conditions' => array('tag' => explode(' ', $query))))) {
 
     }
 
-    $result = $this->Image->find('all', compact('limit', 'conditions', 'fields'));
+    $order = array('featured' => 'DESC');
+
+    $result = $this->Image->find('all', compact('limit', 'conditions', 'fields', 'order'));
 
     $this->set(compact('result'));
   }
