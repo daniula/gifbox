@@ -32,3 +32,4 @@
 /app/tmp/tests
 !/app/tmp/tests/.gitkeep
 
+/lib/Cake
