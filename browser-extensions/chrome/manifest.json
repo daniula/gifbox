@@ -1,0 +1,14 @@
+{
+  "name": "Gifbox",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Suggests some nice gifs to used instead of insults.",
+  "content_scripts": [{
+    "matches": [ "http://*/*", "https://*/*" ],
+    "js": ["jquery.js", "contentscript.js"],
+    "run_at": "document_end"
+  }],
+  "permissions": [
+    "http://gifbox.co/"
+  ]
+}
