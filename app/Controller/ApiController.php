@@ -64,10 +64,10 @@ class ApiController extends AppController {
 
   public function beforeRender() {
     parent::beforeRender();
-    $results = Set::extract($this->viewVars['result'], '{n}.Image');
-    foreach ($results as &$result) {
-      if (strpos('.gif', $result['url']) === false && strpos('.jpg', $result['url'])) {
-        $result['url'] .= '.gif';
+    $result = Set::extract($this->viewVars['result'], '{n}.Image');
+    foreach ($result as &$elem) {
+      if (strpos('.gif', $elem['url']) === false && strpos('.jpg', $elem['url'])) {
+        $elem['url'] .= '.gif';
       }
     }
     $this->set('result', $result);
